@@ -1,0 +1,21 @@
+{
+  "name": "tournament-entry-3",
+  "version": "1.0.0",
+  "description": "BATTS Tournament Entry System",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "tournament",
+    "table-tennis",
+    "entry",
+    "stripe"
+  ],
+  "author": "cbj-uk-design",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.2",
+    "stripe": "^14.5.0"
+  }
+}
