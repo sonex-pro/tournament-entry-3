@@ -3,9 +3,8 @@
  * Handles all server-side communications for secure tournament entry submission
  */
 
-// TOURNAMENT-ENTRY-3:
-// Replace this placeholder with the NEW Netlify Functions base URL when supplied.
-const API_BASE_URL = 'YOUR_NEW_NETLIFY_FUNCTION_URL';
+// TOURNAMENT-ENTRY-3: Netlify Functions for the new website.
+const API_BASE_URL = 'https://tournament3.netlify.app/.netlify/functions';
 
 /**
  * Create a secure tournament entry and Stripe checkout session
@@ -14,10 +13,6 @@ const API_BASE_URL = 'YOUR_NEW_NETLIFY_FUNCTION_URL';
  */
 async function createSecureTournamentEntry(entryData) {
   try {
-    if (API_BASE_URL === 'YOUR_NEW_NETLIFY_FUNCTION_URL') {
-      throw new Error('The new Netlify Functions URL has not been configured');
-    }
-
     // Prepare data for checkout - tournament entry has fixed price
     const paymentData = {
       name: entryData.name || 'Not specified',

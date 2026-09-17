@@ -1,4 +1,4 @@
-const stripe = require('stripe')(process.env.Stripe_P_key);
+const stripe = require('stripe')(process.env.STRIPE_P_KEY);
 const axios = require('axios');
 
 exports.handler = async (event) => {
@@ -16,7 +16,7 @@ exports.handler = async (event) => {
       stripeEvent = stripe.webhooks.constructEvent(
         event.body,
         stripeSignature,
-        process.env.Stripe_webhook_signing
+        process.env.STRIPE_WEBHOOK_SIGNING
       );
     } catch (error) {
       console.error('Webhook signature verification failed:', error.message);

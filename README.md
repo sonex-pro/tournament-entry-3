@@ -64,11 +64,11 @@ tournament-entry-3/
 1. Deploy this project to Netlify
 2. Update `js/secure-api.js` with your Netlify site URL
 3. Set up environment variables in Netlify:
-   - `Stripe_P_key`: Your Stripe secret key
-   - `Stripe_webhook_signing`: Your webhook signing secret
+   - `STRIPE_P_KEY`: Your Stripe secret key
+   - `STRIPE_WEBHOOK_SIGNING`: Your webhook signing secret
    - `GOOGLE_APPS_SCRIPT_URL`: Your Google Apps Script web app URL
    - `GOOGLE_APPS_SCRIPT_API_KEY`: Same API key as in your Google Apps Script
-   - `Site_URL`: Your Netlify site URL
+   - `SITE_URL`: Your Netlify site URL
 
 ### 4. Testing
 
@@ -80,11 +80,11 @@ tournament-entry-3/
 ## Environment Variables Required
 
 ```
-Stripe_P_key=sk_test_...
-Stripe_webhook_signing=whsec_...
+STRIPE_P_KEY=sk_test_...
+STRIPE_WEBHOOK_SIGNING=whsec_...
 GOOGLE_APPS_SCRIPT_URL=https://script.google.com/macros/s/.../exec
 GOOGLE_APPS_SCRIPT_API_KEY=your-secure-api-key
-Site_URL=https://your-tournament-site.netlify.app
+SITE_URL=https://your-tournament-site.netlify.app
 ```
 
 ## Payment Flow

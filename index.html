@@ -332,18 +332,13 @@
       maleCheckbox.addEventListener('change', () => { if (maleCheckbox.checked) femaleCheckbox.checked = false; });
       femaleCheckbox.addEventListener('change', () => { if (femaleCheckbox.checked) maleCheckbox.checked = false; });
 
-      // TOURNAMENT-ENTRY-3: Add the NEW Stripe Sandbox/Test publishable key when supplied.
+      // TOURNAMENT-ENTRY-3: NEW Stripe Sandbox/Test publishable key.
       // Never place a Stripe secret key in this client-side file.
-      const STRIPE_PUBLISHABLE_KEY = 'YOUR_NEW_STRIPE_TEST_PUBLISHABLE_KEY';
-      const stripe = STRIPE_PUBLISHABLE_KEY === 'YOUR_NEW_STRIPE_TEST_PUBLISHABLE_KEY' ? null : Stripe(STRIPE_PUBLISHABLE_KEY);
+      const STRIPE_PUBLISHABLE_KEY = 'pk_test_51UGG1NKPKPF0NL4rC1Rhdcn24BJrBXRiqeEOUErwsGhIycq3NEPnB9j6ejpDCaga0I5KwgmfrXz0et6QqKbkwSKm00v6ulTJgP';
+      const stripe = Stripe(STRIPE_PUBLISHABLE_KEY);
 
       form.addEventListener('submit', async function (event) {
         event.preventDefault();
-
-        if (!stripe) {
-          alert('The new Stripe Sandbox account has not been configured yet.');
-          return;
-        }
 
         if (!maleCheckbox.checked && !femaleCheckbox.checked) {
           alert('Please select your gender category (Male or Female).');

@@ -1,4 +1,4 @@
-const stripe = require('stripe')(process.env.Stripe_P_key);
+const stripe = require('stripe')(process.env.STRIPE_P_KEY);
 const axios = require('axios');
 
 exports.handler = async (event) => {
@@ -60,9 +60,9 @@ exports.handler = async (event) => {
         }
       ],
       mode: 'payment',
-      // TOURNAMENT-ENTRY-3: Set Site_URL in the NEW Netlify service before enabling checkout.
-      success_url: `${process.env.Site_URL}/index.html?payment_success=true&session_id={CHECKOUT_SESSION_ID}`,
-      cancel_url: `${process.env.Site_URL}/index.html?payment_canceled=true`,
+      // TOURNAMENT-ENTRY-3: Set SITE_URL in the NEW Netlify service before enabling checkout.
+      success_url: `${process.env.SITE_URL}/index.html?payment_success=true&session_id={CHECKOUT_SESSION_ID}`,
+      cancel_url: `${process.env.SITE_URL}/index.html?payment_canceled=true`,
       metadata: {
         name: data.name || '',
         email: data.email || '',
