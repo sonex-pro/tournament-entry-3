@@ -38,8 +38,8 @@ exports.handler = async (event) => {
         body: JSON.stringify({ error: 'Missing required fields' })
       };
     }
-    // TOURNAMENT-ENTRY-3: Keep test pricing enabled while using the NEW Stripe Sandbox account.
-    const TEST_MODE = true;
+    // TOURNAMENT-ENTRY-3: test mode false for production, true for testing.
+    const TEST_MODE = false;
     const CORRECT_PRICE = TEST_MODE ? 0.50 : 34.00;
     const amount = Math.round(CORRECT_PRICE * 100);
 
