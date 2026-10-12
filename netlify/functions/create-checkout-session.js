@@ -43,7 +43,7 @@ exports.handler = async (event) => {
     const CORRECT_PRICE = TEST_MODE ? 0.50 : 34.00;
     const amount = Math.round(CORRECT_PRICE * 100);
 
-    // Create a Stripe checkout session for tournament entry
+    // Create a Stripe checkout session for tournament entry 3
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ['card'],
       line_items: [
