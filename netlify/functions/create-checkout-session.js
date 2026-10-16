@@ -39,7 +39,7 @@ exports.handler = async (event) => {
       };
     }
     // TOURNAMENT-ENTRY-3: test mode false for production, true for testing.
-    const TEST_MODE = true;
+    const TEST_MODE = false;
     const CORRECT_PRICE = TEST_MODE ? 0.30 : 34.00;
     const amount = Math.round(CORRECT_PRICE * 100);
 
