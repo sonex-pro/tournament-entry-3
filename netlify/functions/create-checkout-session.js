@@ -40,7 +40,7 @@ exports.handler = async (event) => {
     }
     // TOURNAMENT-ENTRY-3: test mode false for production, true for testing.
     const TEST_MODE = true;
-    const CORRECT_PRICE = TEST_MODE ? 0.20 : 34.00;
+    const CORRECT_PRICE = TEST_MODE ? 0.30 : 34.00;
     const amount = Math.round(CORRECT_PRICE * 100);
 
     // Create a Stripe checkout session for tournament entry 3
